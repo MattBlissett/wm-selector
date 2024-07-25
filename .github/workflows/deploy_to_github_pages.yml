@@ -22,8 +22,8 @@ jobs:
           rm -Rf wm-selector.github.io/*
           cp -Rf dist/* wm-selector.github.io/
           cd wm-selector.github.io/
-          git config user.email 'dsusco@gmail.com'
-          git config user.name 'David Susco'
+          git config user.email 'MattBlissett@users.noreply.github.com'
+          git config user.name 'Matt Blissett'
           git checkout README.md
           git add .
           git commit -m '${{ github.repository }} ${{ github.sha }}'
