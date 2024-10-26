@@ -14,7 +14,7 @@ import store from '@/store';
 export default {
   name: 'SaveView',
   methods: {
-    url: () => window.location.origin + '/#/?' + Querystring.stringify(Object.keys(store.getters.usedUnits)
+    url: () => window.location.origin + window.location.pathname + '#/?' + Querystring.stringify(Object.keys(store.getters.usedUnits)
       .reduce((url, unitID) => {
         var unit = store.getters.usedUnits[unitID];
 
