@@ -1,10 +1,14 @@
+https://wm-selector.github.io/#/?4=1&8=1&9=1&10=1&jsonPath=warmaster-armies%2Flizardmen&label=&printItems=
+
+https://mattblissett.github.io/wm-selector/#/?3=1&7=1&10=1&jsonPath=json%2Fwarmaster-armies%2Fempire&label=&printItems=
+
 <template>
   <main class="save-view">
     <p>The following URL can be used to restore the current list:</p>
 
     <textarea readonly v-html="url()" @focus="$event.target.select()"></textarea>
 
-    <p>And this URL can be used to export the current list to the main Warmaster Army Selector site:</p>
+    <p>And this URL can be used to export the current list to the main Warmaster Army Selector site, <em>but only if the lists used are similar between both sites</em>:</p>
 
     <textarea readonly v-html="exporturl()" @focus="$event.target.select()"></textarea>
   </main>
