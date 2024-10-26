@@ -3,6 +3,10 @@
     <p>The following URL can be used to restore the current list:</p>
 
     <textarea readonly v-html="url()" @focus="$event.target.select()"></textarea>
+
+    <p>And this URL can be used to export the current list to the main Warmaster Army Selector site:</p>
+
+    <textarea readonly v-html="exporturl()" @focus="$event.target.select()"></textarea>
   </main>
 </template>
 
@@ -26,7 +30,24 @@ export default {
 
         return url;
       }, {
-        jsonPath: store.getters.jsonPath,
+        jsonPath: store.getters.jsonPath.replace('json/', ''),
+        label: store.getters.label,
+        printItems: store.getters.printItems.map((printItem) => printItem.abbr).join(',')
+      })),
+
+    exporturl: () => 'https://wm-selector.github.io/#/?' + Querystring.stringify(Object.keys(store.getters.usedUnits)
+      .reduce((url, unitID) => {
+        var unit = store.getters.usedUnits[unitID];
+
+        url[unit.order] = unit.number;
+
+        for (var upgradeID in unit.upgrades) {
+          url[unit.order + '-' + store.getters.upgrades[upgradeID].order] = unit.upgrades[upgradeID].number;
+        }
+
+        return url;
+      }, {
+        jsonPath: store.getters.jsonPath.replace('json/', ''),
         label: store.getters.label,
         printItems: store.getters.printItems.map((printItem) => printItem.abbr).join(',')
       }))
