@@ -11,6 +11,11 @@
       <a target="_blank" title="Rules Update (included in the PDFs but not the printed rulebook)" href="/pdfs/Warmaster_Rules_Update.pdf"><span>Rules Update (included in the PDFs but not the printed rulebook)</span></a>
     </span>
 
+    <ArmyListAccordion :title="'Warmaster Revolution'">
+      <a target="_blank" title="Warmaster Revolution Rules" href="/pdfs/WMR 2.0.1.pdf"><span>Warmaster Revolution Compendium</span></a>
+      <a target="_blank" title="Warmaster Revolution Armies" href="/pdfs/WMR_Armies2.25.pdf"><span>Warmaster Revolution Armies</span></a>
+    </ArmyListAccordion>
+
     <ArmyListAccordion :title="'Warmaster Armies'">
       <a target="_blank" title="Warmaster Armies" href="/pdfs/Warmaster_Armies.pdf"><span>Warmaster Armies</span></a>
       <a target="_blank" title="Warmaster Armies Errata" href="/pdfs/Warmaster_Armies_Errata_2009.pdf"><span>Warmaster Armies Errata</span></a>
@@ -18,11 +23,6 @@
 
     <ArmyListAccordion :title="'Warmaster Trial Armies Compendium 2009'">
       <a target="_blank" title="Warmaster Trial Armies Compendium 2009" href="/pdfs/Warmaster_Trial_Armies_2009.pdf"><span>Warmaster Trial Armies Compendium 2009</span></a>
-    </ArmyListAccordion>
-
-    <ArmyListAccordion :title="'Warmaster Revolution'">
-      <a target="_blank" title="Warmaster Revolution Rules" href="/pdfs/WMR 2.0.1.pdf"><span>Warmaster Revolution Rules</span></a>
-      <a target="_blank" title="Warmaster Revolution Armies" href="/pdfs/WMR_Armies2.24.pdf"><span>Warmaster Revolution Armies</span></a>
     </ArmyListAccordion>
 
     <ArmyListAccordion :title="'Warmaster Ancients'">
@@ -43,7 +43,7 @@
       <a target="_blank" title="Warmaster Evolution Armées" href="/pdfs/WME_Armees_v2.42_beta.pdf"><span>Warmaster Evolution Armées</span></a>
     </ArmyListAccordion>
 
-    <ArmyListAccordion :title="'Warmaster The Battle of Five Armies'">
+    <ArmyListAccordion :title="'The Battle of Five Armies'">
     </ArmyListAccordion>
   </main>
 </template>
